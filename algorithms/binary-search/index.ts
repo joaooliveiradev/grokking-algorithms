@@ -2,7 +2,7 @@ const binarySearch = (arr: number[], item: number): number => {
     let firstItem: number = 0;
     let lastItem: number = arr.length - 1;
     let mid: number = 0;
-    while (mid !== item) {
+    while (firstItem <= lastItem) {
         mid = Math.floor((firstItem + lastItem) / 2);
         if (arr[mid] == item) {
             return mid;
@@ -12,7 +12,7 @@ const binarySearch = (arr: number[], item: number): number => {
             lastItem = mid - 1;
         }
     }
-    return -1
+    return -1;
 }
 export default binarySearch
 
